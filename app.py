@@ -12,12 +12,12 @@ from pymongo import MongoClient
 load_dotenv()
 MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
 MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
-MONGODB_DBNAME = 'test'
+MONGODB_DBNAME = 'GettingStarted'
 
 app = Flask(__name__)
 
 
-client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@web-1-1.mrsrq.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
+client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@gettingstarted.8vrwh.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
 db = client[MONGODB_DBNAME]
 
 plants_db = db.plants
